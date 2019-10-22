@@ -333,7 +333,53 @@ template {
   display: none !important;
 }
 
+img {
+  width: 100%;
+}
+
+nav {
+  display: none;
+}
+
+.image {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.container {
+  background-color: #868e96;
+  position: relative;
+}
+
+.burger {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.burger:checked ~ nav {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+li > a {
+  color: white;
+}
+
 @media (min-width: 768px) {
+  nav {
+    display: block;
+  }
   ul {
     display: -ms-flexbox;
     display: flex;
@@ -353,19 +399,19 @@ template {
   }
 }
 
+@media (min-width: 1200px) {
+  img, .burger {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+}
+
 body {
-  background-image: url("../img/accueil.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-img {
-  width: 100%;
-}
-
-.image {
-  width: 100px;
 }
 
 .container2 {

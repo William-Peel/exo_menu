@@ -1,4 +1,44 @@
+img{
+  width: 100%;
+}
+nav{
+  display: none;
+}
+.image{
+  width: 100px;
+  margin-left:15px ;
+}
+.container{
+  background-color: #868e96;
+  position:relative;
+}
+.burger{
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 15px;
+  width:100px;
+  height:100px;
+}
+.burger:checked ~ nav{
+  display: block;
+}
+li{
+  list-style: none;
+}
+ul{
+  margin-bottom: 0px;
+}
+li > a{
+  color: white;
+}
+
+
+
 @media (min-width: 768px){
+  nav{
+    display:block;
+  }
   ul{
     display: flex;
     flex-direction: row;
@@ -10,5 +50,16 @@
   .container{
     display: flex;
     align-items: center;
+  }
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+  img, .burger{
+      display: none;
+  }
+  nav{
+    display:block;
   }
 }
